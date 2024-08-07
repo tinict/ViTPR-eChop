@@ -1,0 +1,73 @@
+:root {
+    --height-sub-header: 45px;
+    --bg-color-sub-header: #FFF5BC;
+    --height-icon: 17px;
+    --width-icon: 30px;
+    --font-text-icon: "roboto";
+    --font-size-icon: 13px;
+    --font-color: #750000;
+    --avatar-height: 34px;
+    --avatar-width: 34px;
+    --header-height: 100px;
+}
+
+.sub-header {
+    height: var(--height-sub-header);
+    background-color: var(--bg-color-sub-header);
+    color: var(--font-color) !important;
+}
+
+.icon {
+    height: var(--height-icon);
+    width: var(--width-icon);
+}
+
+.text-icon {
+    font-family: var(--font-text-icon);
+    font-size: var(--font-size-icon);
+    color: var(--font-color);
+}
+
+.avatar-user {
+    height: 100%;
+    width: 100%;
+}
+
+.avatar-image {
+    height: var(--avatar-height);
+    width: var(--avatar-width);
+    border-radius: 100%;
+}
+
+.header {
+    height: var(--header-height);
+}
+
+.slider-item {
+    background-image: url('../images/icons/slider-1.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide-text-1 {
+    color: #B10000;
+    font-size: 38px;
+    font-weight: 600;
+    font-family: 'Roboto';
+}
+
+.slide-text-2 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 38px;
+    font-family: 'Roboto';
+}
+
+.swiper-product {
+    width: 150px;
+}
+
+
