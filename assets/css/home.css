@@ -229,6 +229,24 @@
     left: 1%;
 }
 
+.btn-down-app {
+    width: 276px;
+    height: 54px;
+    gap: 0px;
+    opacity: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px -9px #00000066;
+    position: absolute;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #B10000;
+    top: 360px;
+    left: 550px;
+    border: 0;
+}
+
 .smart-object {
     position: absolute;
     top: 0;
@@ -273,12 +291,19 @@
     background: #000 !important;
 }
 
+.exchange-text {
+    position: relative;
+}
+
 .category-line {
-    width: 50px;
+    width: 100px;
     height: 4px;
     background-color: #f00;
-    margin: 0 auto;
-    margin-top: 10px;
+    position: absolute;
+    left: 50px;
+    right: 10px;
+    top: 38px;
+    margin-top: 10px    ;
 }
 
 .list-category {
