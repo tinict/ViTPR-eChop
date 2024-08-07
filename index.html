@@ -151,7 +151,7 @@
                         </div>
                     </div>
 
-                    <!-- <div class="swiper-slide slider-item">
+                    <div class="swiper-slide slider-item">
                         <div class="box-slogan">
                             <h1 class="slide-text">
                                 <span class="slide-text-1">MUA BÁN</span>
@@ -167,7 +167,7 @@
                                 Quà tặng hấp dẫn
                             </button>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
@@ -365,13 +365,19 @@
 
             <!-- Brands -->
             <section class="box-brands d-flex align-items-center">
-                <div class="d-flex brands container swiper swiper-container-brands align-items-center justify-content-center">
+                <div
+                    class="d-flex brands container swiper swiper-container-brands align-items-center justify-content-center">
                     <div class="d-flex swiper-wrapper">
-                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img src="./assets//images/icons/brand-1.png" alt=""></div>
-                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img src="./assets//images/icons/brand-1.png" alt=""></div>
-                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img src="./assets//images/icons/brand-1.png" alt=""></div>
-                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img src="./assets//images/icons/brand-1.png" alt=""></div>
-                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img src="./assets//images/icons/brand-1.png" alt=""></div>
+                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img
+                                src="./assets//images/icons/brand-1.png" alt=""></div>
+                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img
+                                src="./assets//images/icons/brand-1.png" alt=""></div>
+                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img
+                                src="./assets//images/icons/brand-1.png" alt=""></div>
+                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img
+                                src="./assets//images/icons/brand-1.png" alt=""></div>
+                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img
+                                src="./assets//images/icons/brand-1.png" alt=""></div>
                     </div>
                     <div class="brand-icon-left">
                         <img src="./assets/images/icons/circle_right.png" alt="">
@@ -385,7 +391,10 @@
             <section class="category-product container-sm mt-5">
                 <div class="category-head">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h3>Trao đổi hàng hóa</h3>
+                        <div class="exchange-text">
+                            <h3>Trao đổi hàng hóa</h3>
+                            <div class="category-line"></div>
+                        </div>
                         <div class="group-button-slide">
                             <button>
                                 <img src="./assets//images/icons/btn_left.png" alt="">
@@ -395,7 +404,6 @@
                             </button>
                         </div>
                     </div>
-                    <div class="category-line"></div>
                 </div>
                 <div class="list-product-buy mt-4 d-flex flex-wrap">
                     <div
@@ -500,6 +508,9 @@
                         <img class="smart-object" src="./assets/images/icons/Smart Object.png" alt="">
                         <img class="edition" src="./assets/images/icons/Edition.png" alt="">
                     </div>
+                    <button class="btn-down-app">
+                        TẢI ỨNG DỤNG NGAY >>
+                    </button>
                 </div>
             </section>
 
@@ -667,16 +678,19 @@
         </script>
         <script>
             const swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1,                   
                 loop: true,
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
                 },
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                }
+                    nextEl: '.swiper-button-prev',
+                    prevEl: '.swiper-button-next',
+                },
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
             });
         </script>
 </body>
