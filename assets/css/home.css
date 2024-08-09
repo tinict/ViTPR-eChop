@@ -113,6 +113,12 @@
     border-radius: 100%;
 }
 
+.category-story-img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover;
+}
+
 .list-category {
     height: 196px;
     position: relative;
@@ -142,21 +148,34 @@
     width: 24px;
 }
 
-.group-button-slide>button {
+.group-button-slide > button {
     border: 0;
     background-color: #ffffff;
 }
 
 .text-product {
+    width: 100%;
     font-weight: 400;
     font-size: 16px;
     font-family: 'Roboto';
     height: 19px;
+    white-space: nowrap;          
+    overflow: hidden;        
+    text-overflow: ellipsis;
 }
 
 .product-item {
-    width: 272px;
-    height: 490px;
+    height: 100%;
+}
+
+.product-image {
+    width: 100%; 
+    height: auto;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
 }
 
 .product-item-btn {
@@ -182,7 +201,7 @@
 
 .brands {
     position: relative;
-    padding: 0 50px 0 50px;
+    margin: 0 50px 0 50px;
 }
 
 .brand-icon-left {
@@ -209,24 +228,32 @@
 .banner-app {
     height: 478px;
     width: 100%;
-    background-image: url('../images/icons/banner-dowload-echop.png');
+}
+
+.banner-content-app {
+    width: 100%;
+    height: 440px;
+    position: relative;
+    background-image: url('../images/icons/bg-ecom-test.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.banner-content-app {
-    height: 440px;
-    position: relative;
-}
-
 .group-device {
+    position: absolute;
+    top: -8%;
+    left: 100px;
     width: 430px;
     height: 433px;
-    position: relative;
+}
+
+.group-text-app {
+    width: 35%;
+    height: auto;
     position: absolute;
-    top: -3%;
-    left: 1%;
+    right: 15%;
+    top: calc(50% - 25%);
 }
 
 .btn-down-app {
@@ -236,14 +263,14 @@
     opacity: 0px;
     background: #FFFFFF;
     box-shadow: 0px 10px 20px -9px #00000066;
-    position: absolute;
+    /* position: absolute; */
     font-family: 'Roboto';
     font-size: 20px;
     font-weight: 500;
     text-align: center;
     color: #B10000;
-    top: 360px;
-    left: 550px;
+    /* top: 325px;
+    left: 750px; */
     border: 0;
 }
 
@@ -251,12 +278,16 @@
     position: absolute;
     top: 0;
     left: 0;
+    width: 208;
+    height: auto;
 }
 
 .edition {
     position: absolute;
     right: 0;
     bottom: 0;
+    width: 208;
+    height: auto;
 }
 
 
@@ -265,11 +296,6 @@
     height: 520px;
     position: relative;
     background: #f7f7f7;
-}
-
-.slide-text {
-    font-size: 2rem;
-    color: #333;
 }
 
 .slogan {
@@ -521,6 +547,10 @@ html, body {
     height: 100%;
 }
 
+.brand-container img {
+    width: 200 !important;
+}  
+
 .box-brands {
     height: 210px;
     background-color: #F9F9F9;
@@ -533,6 +563,12 @@ html, body {
     right: 0;
     top: 0;
     bottom: 0;
+    visibility: hidden;
+    border-radius: 0.375rem;
+}
+
+.card-gift:hover .bg-overlay {
+    visibility: visible;
 }
 
 .btn-send-gift {
@@ -564,4 +600,13 @@ html, body {
     height: 16px;
     width: 16px;
     background-image: url('../images/icons/icon-chat.png');
+}
+
+
+.res-tablet {
+    display: none;
+}
+
+.header-mobile {
+    display: none;
 }

@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
 <body>
     <div class="root">
-        <div class="home-page">
+        <div class="container-page d-flex flex-column justify-content-center align-items-center">
+
             <!-- Sub header home page -->
             <div class="sub-header d-flex justify-content-between container-fluid align-items-center">
                 <div class="sub-header-left d-flex align-items-center">
@@ -44,10 +46,12 @@
             </div>
 
             <!-- Header Home Page -->
-            <div class="container-sm">
-                <header class="header d-flex align-items-center justify-content-between">
+            <div class="container custom-container">
+                <header class="header d-flex align-items-center justify-content-between header-pc">
                     <div class="d-flex">
-                        <img src="./assets//images/icons/doido 2.png" alt="">
+                        <div class="header-logo">
+                            <img src="./assets//images/icons/doido 2.png" alt="">
+                        </div>
                     </div>
                     <div class="d-flex header-menu">
                         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -120,14 +124,95 @@
                             <img src="./assets/images/icons/icon-search.png" alt="">
                         </div>
                         <button class="btn-post d-flex align-items-center justify-content-between">
-                            <img class="me-2" src="./assets/images/icons/icon-post.png" alt="">
-                            <span>Đăng bài</span>
+                            <img src="./assets/images/icons/icon-post.png" alt="">
+                            <span class="ms-2 hinden-text">Đăng bài</span>
                         </button>
                         <div class="ms-3">
                             <img class="avatar-image" src="./assets//images/icons/avatar-test.jpg" alt="">
                         </div>
                     </div>
                 </header>
+
+                <!-- Nav Mobile -->
+                <nav class="navbar header-mobile">
+                    <div class="container custom-container custom-nav-mobile">
+                        <div class="d-flex">
+                            <div class="header-logo">
+                                <img src="./assets//images/icons/doido 2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="me-2">
+                                <img src="./assets/images/icons/icon-search.png" alt="">
+                            </div>
+                            <button class="btn-post d-flex align-items-center justify-content-between">
+                                <img src="./assets/images/icons/icon-post.png" alt="">
+                            </button>
+                            <div class="ms-2">
+                                <img class="avatar-image" src="./assets//images/icons/avatar-test.jpg" alt="">
+                            </div>
+                            <button class="ms-2 btn-nav-mobile-tongle" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Danh mục sản phẩm
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="d-flex align-items-center">
+                                            <img class="ms-2" style="width: 20px; height: 20px;"
+                                                src="./assets/images/icons/icon-dress.png" alt="">
+                                            <a class="dropdown-item" href="#">Áo quần</a>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <img class="ms-2" style="width: 20px; height: 20px;"
+                                                src="./assets/images/icons/icon-dress.png" alt="">
+                                            <a class="dropdown-item" href="#">Phụ kiện xe máy</a>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <img class="ms-2" style="width: 20px; height: 20px;"
+                                                src="./assets/images/icons/icon-dress.png" alt="">
+                                            <a class="dropdown-item" href="#">Đồ điện tử</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Trao đổi hàng hóa</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Mua bán đồ secondhand</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Hàng cũ đem tặng</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Về chúng tôi</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Liên hệ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="dropdown menu-nation d-flex flex-column align-items-center">
+                                        <button class="btn dropdown-toggle d-flex align-items-center" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img class="icon" src="./assets//images/icons/icon-vn.png" alt="">
+                                            <span class="text-icon ms-2">Việt Nam</span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Việt Nam</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </div>
 
             <!-- Banner Slider -->
@@ -175,7 +260,7 @@
             </section>
 
             <!-- Category product -->
-            <section class="category-product container mt-4 mb-2">
+            <section class="category-product container mt-4 custom-container">
                 <div class="category-head">
                     <div class="d-flex justify-content-between align-items-center">
                         <h3>Danh mục bán sản phẩm</h3>
@@ -184,77 +269,48 @@
                 </div>
                 <div class="list-category mt-3 swiper swiper-container-2">
                     <div class="list-category-container d-flex swiper-wrapper">
-                        <div
-                            class="swiper-slide d-flex flex-column justify-content-center align-items-center me-4 ms-4">
-                            <div
-                                class="category-product-image d-flex flex-column justify-content-center align-items-center">
-                                <img src="./assets/images/icons/img-1.jpg" alt="">
+                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center">
+                            <div class="category-product-image d-flex justify-content-center align-items-center">
+                                <img src="./assets/images/icons/img-1.jpg" alt=""
+                                    class="img-fluid rounded-circle category-story-img">
                             </div>
-                            <span class="mt-2">Áo quần nữ</span>
+                            <span class="mt-2 item-story-category-title">Áo quần nữ</span>
                         </div>
-                        <div
-                            class="swiper-slide d-flex flex-column justify-content-center align-items-center me-4 ms-4">
-                            <div
-                                class="category-product-image d-flex flex-column justify-content-center align-items-center">
-                                <img src="./assets/images/icons/img-1.jpg" alt="">
+
+                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center">
+                            <div class="category-product-image d-flex justify-content-center align-items-center">
+                                <img src="./assets/images/icons/img-1.jpg" alt=""
+                                    class="img-fluid rounded-circle category-story-img">
                             </div>
-                            <span class="mt-2">Giày dép</span>
+                            <span class="mt-2 item-story-category-title">Giày dép</span>
                         </div>
-                        <div
-                            class="swiper-slide d-flex flex-column justify-content-center align-items-center me-4 ms-4">
-                            <div
-                                class="category-product-image d-flex flex-column justify-content-center align-items-center">
-                                <img src="./assets/images/icons/img-1.jpg" alt="">
+                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center ">
+                            <div class="category-product-image d-flex justify-content-center align-items-center">
+                                <img src="./assets/images/icons/img-1.jpg" alt=""
+                                    class="img-fluid rounded-circle category-story-img">
                             </div>
-                            <span class="mt-2">Phụ kiện</span>
+                            <span class="mt-2 item-story-category-title">Phụ kiện</span>
                         </div>
-                        <div
-                            class="swiper-slide d-flex flex-column justify-content-center align-items-center me-4 ms-4">
-                            <div
-                                class="category-product-image d-flex flex-column justify-content-center align-items-center">
-                                <img src="./assets/images/icons/img-1.jpg" alt="">
+                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center">
+                            <div class="category-product-image d-flex justify-content-center align-items-center">
+                                <img src="./assets/images/icons/img-1.jpg" alt=""
+                                    class="img-fluid rounded-circle category-story-img">
                             </div>
-                            <span class="mt-2">Sách vở</span>
+                            <span class="mt-2 item-story-category-title">Sách vở</span>
                         </div>
-                        <div
-                            class="swiper-slide d-flex flex-column justify-content-center align-items-center me-4 ms-4">
-                            <div
-                                class="category-product-image d-flex flex-column justify-content-center align-items-center">
-                                <img src="./assets/images/icons/img-1.jpg" alt="">
+                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center">
+                            <div class="category-product-image d-flex justify-content-center align-items-center">
+                                <img src="./assets/images/icons/img-1.jpg" alt=""
+                                    class="img-fluid rounded-circle category-story-img">
                             </div>
-                            <span class="mt-2">Mỹ phẩm</span>
+                            <span class="mt-2 item-story-category-title">Mỹ phẩm</span>
                         </div>
-                        <div
-                            class="swiper-slide d-flex flex-column justify-content-center align-items-center me-4 ms-4">
-                            <div
-                                class="category-product-image d-flex flex-column justify-content-center align-items-center">
-                                <img src="./assets/images/icons/img-1.jpg" alt="">
+                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center">
+                            <div class="category-product-image d-flex justify-content-center align-items-center">
+                                <img src="./assets/images/icons/img-1.jpg" alt=""
+                                    class="img-fluid rounded-circle category-story-img">
                             </div>
-                            <span class="mt-3">Nước hoa</span>
-                        </div>
-                        <div
-                            class="swiper-slide d-flex flex-column justify-content-center align-items-center me-4 ms-4">
-                            <div
-                                class="category-product-image d-flex flex-column justify-content-center align-items-center">
-                                <img src="./assets/images/icons/img-1.jpg" alt="">
-                            </div>
-                            <span class="mt-3">Nước hoa</span>
-                        </div>
-                        <div
-                            class="swiper-slide d-flex flex-column justify-content-center align-items-center me-4 ms-4">
-                            <div
-                                class="category-product-image d-flex flex-column justify-content-center align-items-center">
-                                <img src="./assets/images/icons/img-1.jpg" alt="">
-                            </div>
-                            <span class="mt-3">Nước hoa</span>
-                        </div>
-                        <div
-                            class="swiper-slide d-flex flex-column justify-content-center align-items-center me-4 ms-4">
-                            <div
-                                class="category-product-image d-flex flex-column justify-content-center align-items-center">
-                                <img src="./assets/images/icons/img-1.jpg" alt="">
-                            </div>
-                            <span class="mt-3">Nước hoa</span>
+                            <span class="mt-3 item-story-category-title">Nước hoa</span>
                         </div>
                     </div>
                     <div class="icon-lst-right">
@@ -266,129 +322,141 @@
                 </div>
             </section>
 
-            <!-- Category product -->
-            <section class="category-product container-sm mt-4">
+            <!-- Category product seacondhand -->
+            <section class="category-product container mt-4 custom-container">
                 <div class="category-head">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h3>Mua bán đồ secondhand</h3>
-                        <div class="group-button-slide">
-                            <button>
-                                <img src="./assets//images/icons/btn_left.png" alt="">
-                            </button>
-                            <button>
-                                <img src="./assets//images/icons/btn_right.png" alt="">
-                            </button>
+                    <div class="row align-items-center">
+                        <h3 class="col-lg-9 col-md-9 col-sm-9 col-9 fs-sm-5 fs-md-5 fs-lg-5">Mua bán đồ secondhand</h3>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                            <div class="d-flex justify-content-end align-items-center group-button-slide">
+                                <button>
+                                    <img src="./assets//images/icons/btn_left.png" alt="">
+                                </button>
+                                <button>
+                                    <img src="./assets//images/icons/btn_right.png" alt="">
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="category-line"></div>
+                    <!-- <div class="category-line"></div> -->
                 </div>
-                <div class="list-product-buy mt-4 d-flex flex-wrap">
+                <div class="list-product-buy mt-4 slide row">
                     <div
-                        class="product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
+                        class="col-lg-3 col-md-4 col-sm-6 col-6 p-2 product-item d-flex flex-column justify-content-between align-items-center">
+                        <div class="product-image">
                             <img src="./assets/images/icons/product-buy-1.png" alt="">
                         </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <span class="cost-product">150.000đ</span>
-                        <button class="product-item-btn mb-3">Mua ngay</button>
+                        <span class="text-product mt-2">Chân váy dài Kaki lưng cao su rút dây</span>
+                        <span class="cost-product mt-2">150.000đ</span>
+                        <button class="product-item-btn mt-3 w-30">Mua ngay</button>
                     </div>
                     <div
-                        class="product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
+                        class="col-lg-3 col-md-4 col-sm-6 col-6 p-2 product-item d-flex flex-column justify-content-between align-items-center">
+                        <div class="product-image">
                             <img src="./assets/images/icons/product-buy-1.png" alt="">
                         </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <span class="cost-product">150.000đ</span>
-                        <button class="product-item-btn mb-3">Mua ngay</button>
+                        <span class="text-product mt-2">Chân váy dài Kaki lưng cao su rút dây</span>
+                        <span class="cost-product mt-2">150.000đ</span>
+                        <button class="product-item-btn mt-3 w-30">Mua ngay</button>
                     </div>
                     <div
-                        class="product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
+                        class="col-lg-3 col-md-4 col-sm-6 col-6 p-2 product-item d-flex flex-column justify-content-between align-items-center">
+                        <div class="product-image">
                             <img src="./assets/images/icons/product-buy-1.png" alt="">
                         </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <span class="cost-product">150.000đ</span>
-                        <button class="product-item-btn mb-3">Mua ngay</button>
+                        <span class="text-product mt-2">Chân váy dài Kaki lưng cao su rút dây</span>
+                        <span class="cost-product mt-2">150.000đ</span>
+                        <button class="product-item-btn mt-3 w-30">Mua ngay</button>
                     </div>
                     <div
-                        class="product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
+                        class="col-lg-3 col-md-4 col-sm-6 col-6 p-2 product-item d-flex flex-column justify-content-between align-items-center">
+                        <div class="product-image">
                             <img src="./assets/images/icons/product-buy-1.png" alt="">
                         </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <span class="cost-product">150.000đ</span>
-                        <button class="product-item-btn mb-3">Mua ngay</button>
+                        <span class="text-product mt-2">Chân váy dài Kaki lưng cao su rút dây</span>
+                        <span class="cost-product mt-2">150.000đ</span>
+                        <button class="product-item-btn mt-3 w-30">Mua ngay</button>
                     </div>
                     <div
-                        class="product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
+                        class="col-lg-3 col-md-4 col-sm-6 col-6 p-2 product-item d-flex flex-column justify-content-between align-items-center">
+                        <div class="product-image">
                             <img src="./assets/images/icons/product-buy-1.png" alt="">
                         </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <span class="cost-product">150.000đ</span>
-                        <button class="product-item-btn mb-3">Mua ngay</button>
+                        <span class="text-product mt-2">Chân váy dài Kaki lưng cao su rút dây</span>
+                        <span class="cost-product mt-2">150.000đ</span>
+                        <button class="product-item-btn mt-3 w-30">Mua ngay</button>
                     </div>
                     <div
-                        class="product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
+                        class="col-lg-3 col-md-4 col-sm-6 col-6 p-2 product-item d-flex flex-column justify-content-between align-items-center">
+                        <div class="product-image">
                             <img src="./assets/images/icons/product-buy-1.png" alt="">
                         </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <span class="cost-product">150.000đ</span>
-                        <button class="product-item-btn mb-3">Mua ngay</button>
+                        <span class="text-product mt-2">Chân váy dài Kaki lưng cao su rút dây</span>
+                        <span class="cost-product mt-2">150.000đ</span>
+                        <button class="product-item-btn mt-3 w-30">Mua ngay</button>
                     </div>
                     <div
-                        class="product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
+                        class="col-lg-3 col-md-4 col-sm-6 col-6 p-2 product-item d-flex flex-column justify-content-between align-items-center">
+                        <div class="product-image">
                             <img src="./assets/images/icons/product-buy-1.png" alt="">
                         </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <span class="cost-product">150.000đ</span>
-                        <button class="product-item-btn mb-3">Mua ngay</button>
+                        <span class="text-product mt-2">Chân váy dài Kaki lưng cao su rút dây</span>
+                        <span class="cost-product mt-2">150.000đ</span>
+                        <button class="product-item-btn mt-3 w-30">Mua ngay</button>
                     </div>
                     <div
-                        class="product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
+                        class="col-lg-3 col-md-4 col-sm-6 col-6 p-2 product-item d-flex flex-column justify-content-between align-items-center">
+                        <div class="product-image">
                             <img src="./assets/images/icons/product-buy-1.png" alt="">
                         </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <span class="cost-product">150.000đ</span>
-                        <button class="product-item-btn mb-3">Mua ngay</button>
+                        <span class="text-product mt-2">Chân váy dài Kaki lưng cao su rút dây</span>
+                        <span class="cost-product mt-2">150.000đ</span>
+                        <button class="product-item-btn mt-3 w-30">Mua ngay</button>
                     </div>
                 </div>
                 <div class="mt-5 mb-5 d-flex justify-content-center">
-                    <button class="btn-all">
+                    <button class="btn-all w-40 h-10">
                         Xem tất cả >>
                     </button>
                 </div>
             </section>
 
             <!-- Brands -->
-            <section class="box-brands d-flex align-items-center">
-                <div
-                    class="d-flex brands container swiper swiper-container-brands align-items-center justify-content-center">
-                    <div class="d-flex swiper-wrapper">
-                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img
-                                src="./assets//images/icons/brand-1.png" alt=""></div>
-                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img
-                                src="./assets//images/icons/brand-1.png" alt=""></div>
-                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img
-                                src="./assets//images/icons/brand-1.png" alt=""></div>
-                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img
-                                src="./assets//images/icons/brand-1.png" alt=""></div>
-                        <div class="swiper-slide d-flex flex-column justify-content-center align-items-center"><img
-                                src="./assets//images/icons/brand-1.png" alt=""></div>
-                    </div>
-                    <div class="brand-icon-left">
-                        <img src="./assets/images/icons/circle_right.png" alt="">
+            <section class="box-brands w-100 d-flex align-items-center">
+                <div class="brands swiper swiper-container-brands me-5 ms-5">
+                    <div class="d-flex swiper-wrapper brand-container">
+                        <div
+                            class="swiper-slide d-flex flex-column justify-content-center align-items-center brand-item">
+                            <img class="w-50 h-auto px-2" src="./assets//images/icons/brand-1.png" alt="">
+                        </div>
+                        <div
+                            class="swiper-slide d-flex flex-column justify-content-center align-items-center brand-item">
+                            <img class="w-50 h-auto px-2" src="./assets//images/icons/brand-1.png" alt="">
+                        </div>
+                        <div
+                            class="swiper-slide d-flex flex-column justify-content-center align-items-center brand-item">
+                            <img class="w-50 h-auto px-2" src="./assets//images/icons/brand-1.png" alt="">
+                        </div>
+                        <div
+                            class="swiper-slide d-flex flex-column justify-content-center align-items-center brand-item">
+                            <img class="w-50 h-auto px-2" src="./assets//images/icons/brand-1.png" alt="">
+                        </div>
+                        <div
+                            class="swiper-slide d-flex flex-column justify-content-center align-items-center brand-item">
+                            <img class="w-50 h-auto px-2" src="./assets//images/icons/brand-1.png" alt="">
+                        </div>
                     </div>
                     <div class="brand-icon-right">
                         <img src="./assets/images/icons/circle_left.png" alt="">
                     </div>
+                    <div class="brand-icon-left">
+                        <img src="./assets/images/icons/circle_right.png" alt="">
+                    </div>
                 </div>
             </section>
 
-            <section class="category-product container-sm mt-5">
+            <!-- Section exchange product -->
+            <section class="category-product container mt-5 custom-container">
                 <div class="category-head">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="exchange-text">
@@ -405,141 +473,53 @@
                         </div>
                     </div>
                 </div>
-                <div class="list-product-buy mt-4 d-flex flex-wrap">
+                <div class="list-product-buy mt-4 d-flex flex-wrap row">
                     <div
-                        class="exchange-product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
-                            <img src="./assets/images/icons/product-buy-1.png" alt="">
+                        class="col-lg-3 col-md-4 col-sm-6 col-6 d-flex flex-column justify-content-between align-items-center">
+                        <div>
+                            <img class="w-100 h-auto" src="./assets/images/icons/product-buy-1.png" alt="">
                         </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <div class="mb-3 d-flex">
-                            <button class="product-item-btn btn-bg-white d-flex justify-content-center align-items-center me-3">
+                        <span class="text-product mt-2">Chân váy dài Kaki lưng cao su rút dây</span>
+                        <div class="mb-3 d-flex mt-2 w-100">
+                            <button
+                                class="product-item-btn btn-bg-white d-flex justify-content-center align-items-center me-3 w-50">
                                 <div class="icon-chat me-2"></div>
                                 Chat
                             </button>
-                            <button class="product-item-btn">Trao đổi</button>
-                        </div>
-                    </div>
-                    <div
-                        class="exchange-product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
-                            <img src="./assets/images/icons/product-buy-1.png" alt="">
-                        </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <div class="mb-3 d-flex">
-                            <button class="product-item-btn btn-bg-white d-flex justify-content-center align-items-center me-3">
-                                <div class="icon-chat me-2"></div>
-                                Chat
-                            </button>
-                            <button class="product-item-btn">Trao đổi</button>
-                        </div>
-                    </div>
-                    <div
-                        class="exchange-product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
-                            <img src="./assets/images/icons/product-buy-1.png" alt="">
-                        </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <div class="mb-3 d-flex">
-                            <button class="product-item-btn btn-bg-white d-flex justify-content-center align-items-center me-3">
-                                <div class="icon-chat me-2"></div>
-                                Chat
-                            </button>
-                            <button class="product-item-btn">Trao đổi</button>
-                        </div>
-                    </div>
-                    <div
-                        class="exchange-product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
-                            <img src="./assets/images/icons/product-buy-1.png" alt="">
-                        </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <div class="mb-3 d-flex">
-                            <button class="product-item-btn btn-bg-white d-flex justify-content-center align-items-center me-3">
-                                <div class="icon-chat me-2"></div>
-                                Chat
-                            </button>
-                            <button class="product-item-btn">Trao đổi</button>
-                        </div>
-                    </div>
-                    <div
-                        class="exchange-product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
-                            <img src="./assets/images/icons/product-buy-1.png" alt="">
-                        </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <div class="mb-3 d-flex">
-                            <button class="product-item-btn btn-bg-white d-flex justify-content-center align-items-center me-3">
-                                <div class="icon-chat me-2"></div>
-                                Chat
-                            </button>
-                            <button class="product-item-btn">Trao đổi</button>
-                        </div>
-                    </div>
-                    <div
-                        class="exchange-product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
-                            <img src="./assets/images/icons/product-buy-1.png" alt="">
-                        </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <div class="mb-3 d-flex">
-                            <button class="product-item-btn btn-bg-white d-flex justify-content-center align-items-center me-3">
-                                <div class="icon-chat me-2"></div>
-                                Chat
-                            </button>
-                            <button class="product-item-btn">Trao đổi</button>
-                        </div>
-                    </div>
-                    <div
-                        class="exchange-product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
-                            <img src="./assets/images/icons/product-buy-1.png" alt="">
-                        </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <div class="mb-3 d-flex">
-                            <button class="product-item-btn btn-bg-white d-flex justify-content-center align-items-center me-3">
-                                <div class="icon-chat me-2"></div>
-                                Chat
-                            </button>
-                            <button class="product-item-btn">Trao đổi</button>
-                        </div>
-                    </div>
-                    <div
-                        class="exchange-product-item d-flex flex-column justify-content-between align-items-center me-3 ms-3 mt-3">
-                        <div style="width: 272px; height: 350px;">
-                            <img src="./assets/images/icons/product-buy-1.png" alt="">
-                        </div>
-                        <span class="text-product">Chân váy dài Kaki lưng cao su rút dây</span>
-                        <div class="mb-3 d-flex">
-                            <button class="product-item-btn btn-bg-white d-flex justify-content-center align-items-center me-3">
-                                <div class="icon-chat me-2"></div>
-                                Chat
-                            </button>
-                            <button class="product-item-btn">Trao đổi</button>
+                            <button class="product-item-btn w-50">Trao đổi</button>
                         </div>
                     </div>
                 </div>
                 <div class="mt-5 mb-5 d-flex justify-content-center">
-                    <button class="btn-all">
+                    <button class="btn-all w-40 h-10">
                         Xem tất cả >>
                     </button>
                 </div>
             </section>
 
+            <!-- Banner app -->
             <section class="banner-app">
-                <div class="container banner-content-app">
+                <div class="container-fluid banner-content-app">
                     <div class="group-device">
                         <img class="smart-object" src="./assets/images/icons/Smart Object.png" alt="">
-                        <img class="edition" src="./assets/images/icons/Edition.png" alt="">
+                        <img class="edition " src="./assets/images/icons/Edition.png" alt="">
                     </div>
-                    <button class="btn-down-app">
-                        TẢI ỨNG DỤNG NGAY >>
-                    </button>
+                    <div class="group-text-app">
+                        <h3>"ECHOP NỀN TẢNG MUA BÁN TRAO ĐỔI HÀNG HÓA ĐÃ QUA SỬ DỤNG"</h3>
+                        <p class="banner-graph-app">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries</p>
+                        <button class="btn-down-app d-flex flex-column justify-content-center align-items-center">
+                            <span>TẢI ỨNG DỤNG NGAY >></span>
+                        </button>
+                    </div>
                 </div>
             </section>
 
             <!-- product-gift -->
-            <section class="product-gift container mt-5">
+            <section class="product-gift container mt-5 res-desktop custom-container">
                 <div class="category-head">
                     <div class="d-flex justify-content-between align-items-center">
                         <h3>Hàng cũ đem tặng</h3>
@@ -554,21 +534,61 @@
                     </div>
                     <div class="category-line"></div>
                 </div>
-                <div class="list-gift mt-4 mb-5 d-flex">
-                    <div class="gift-item me-4">
+                <div class="list-gift mt-4 d-flex align-items-center">
+                    <div class="d-flex flex-column justify-content-center align-items-center p-2 rounded">
                         <div class="card-gift">
-                            <img class="card-gift-img" src="./assets/images/icons/gift.jpg" alt="">
+                            <img class="w-100 h-auto rounded" src="./assets/images/icons/gift.jpg" alt="">
                             <div class="card-gift-img-tag d-flex flex-column align-items-center">
                                 <span class="card-gift-content">Free</span>
                             </div>
                             <div class="card-icon-heart">
                                 <img src="./assets/images/icons/heart-boder.png" alt="">
                             </div>
+                            <div class="bg-overlay d-flex flex-column align-items-center justify-content-center">
+                                <button class="btn-send-gift">
+                                    <img src="./assets/images/icons/icon-gift.png" alt="">
+                                    <span>Nhận quà tặng</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="gift-item me-4">
+                    <div class="d-flex flex-column justify-content-center align-items-center p-2 rounded">
                         <div class="card-gift">
-                            <img class="card-gift-img" src="./assets/images/icons/gift.jpg" alt="">
+                            <img class="w-100 h-auto rounded" src="./assets/images/icons/gift.jpg" alt="">
+                            <div class="card-gift-img-tag d-flex flex-column align-items-center">
+                                <span class="card-gift-content">Free</span>
+                            </div>
+                            <div class="card-icon-heart">
+                                <img src="./assets/images/icons/heart-boder.png" alt="">
+                            </div>
+                            <div class="bg-overlay d-flex flex-column align-items-center justify-content-center">
+                                <button class="btn-send-gift">
+                                    <img src="./assets/images/icons/icon-gift.png" alt="">
+                                    <span>Nhận quà tặng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center p-2 rounded">
+                        <div class="card-gift">
+                            <img class="w-100 h-auto rounded" src="./assets/images/icons/gift.jpg" alt="">
+                            <div class="card-gift-img-tag d-flex flex-column align-items-center">
+                                <span class="card-gift-content">Free</span>
+                            </div>
+                            <div class="card-icon-heart">
+                                <img src="./assets/images/icons/heart-boder.png" alt="">
+                            </div>
+                            <div class="bg-overlay d-flex flex-column align-items-center justify-content-center">
+                                <button class="btn-send-gift">
+                                    <img src="./assets/images/icons/icon-gift.png" alt="">
+                                    <span>Nhận quà tặng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center p-2 rounded">
+                        <div class="card-gift">
+                            <img class="w-100 h-auto rounded" src="./assets/images/icons/gift.jpg" alt="">
                             <div class="card-gift-img-tag d-flex flex-column align-items-center">
                                 <span class="card-gift-content">Free</span>
                             </div>
@@ -587,10 +607,10 @@
             </section>
 
             <!-- Footer -->
-            <footer class="footer mt-5">
+            <footer class="footer mt-5 w-100">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-sm-3 col-6">
                             <h4 class="footer-col-title">Hỗ trợ</h4>
                             <ul class="list-unstyled">
                                 <li><a href="#">Hướng dẫn bán hàng</a></li>
@@ -602,7 +622,7 @@
                                 <li><a href="#">Chính sách giải quyết tranh chấp</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-sm-3 col-6">
                             <h4 class="footer-col-title">Về Echop</h4>
                             <ul class="list-unstyled">
                                 <li><a href="#">Giới thiệu</a></li>
@@ -610,7 +630,7 @@
                                 <li><a href="#">Blog</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-sm-3 col-6">
                             <h4 class="footer-col-title">Tài khoản</h4>
                             <ul class="list-unstyled">
                                 <li><a href="#">Đăng ký</a></li>
@@ -619,7 +639,7 @@
                                 <li><a href="#">Tin nhắn</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-sm-3 col-6">
                             <h4 class="footer-col-title">Chính sách</h4>
                             <ul class="list-unstyled">
                                 <li><a href="#">Chính sách bảo mật</a></li>
@@ -629,7 +649,7 @@
                                 <li><a href="#">Hướng dẫn an toàn sử dụng</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-12">
                             <div class="footer-social">
                                 <h4 class="footer-col-title">Theo dõi chúng tôi</h4>
                                 <div>
@@ -639,7 +659,7 @@
                                     <a href="#"><img src="./assets/images/icons/icon-tiktok.png" alt="TikTok"></a>
                                 </div>
                             </div>
-                            <div class="footer-payment mt-2">
+                            <div class="footer-payment mt-2 mb-4">
                                 <h4 class="footer-col-title">Giao dịch của bạn</h4>
                                 <div class="method-payments">
                                     <img style="width: 118px;" src="./assets/images/icons/zalopay.png" alt="ZaloPay">
@@ -670,8 +690,8 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
             const swiper1 = new Swiper('.swiper-container-2', {
-                slidesPerView: 4,
-                spaceBetween: 145,
+                slidesPerView: 3,
+                spaceBetween: 140,
                 freeMode: true,
                 loop: true,
                 pagination: {
@@ -681,14 +701,51 @@
                 navigation: {
                     nextEl: '.icon-lst-right',
                     prevEl: '.icon-lst-left',
-                }
+                },
+                breakpoints: {
+                    1200: {
+                        slidesPerView: 6,
+                        spaceBetween: 10,
+                    },
+                    1048: {
+                        slidesPerView: 6,
+                        spaceBetween: 10,
+                    },
+                    900: {
+                        slidesPerView: 5,
+                        spaceBetween: 10,
+                    },
+                    920: {
+                        slidesPerView: 5,
+                        spaceBetween: 10,
+                    },
+                    767: {
+                        slidesPerView: 5,
+                        spaceBetween: 10,
+                    },
+                    720: {
+                        slidesPerView: 5,
+                        spaceBetween: 10,
+                    },
+                    541: {
+                        slidesPerView: 5,
+                        spaceBetween: 10,
+                    },
+                    514: {
+                        slidesPerView: 4,
+                        spaceBetween: 10,
+                    },
+                    300: {
+                        slidesPerView: 4,
+                        spaceBetween: 10,
+                    },
+                },
             });
         </script>
         <script>
             const swiperBrand = new Swiper('.swiper-container-brands', {
                 slidesPerView: 4,
-                spaceBetween: 80,
-                freeMode: true,
+                spaceBetween: 10,
                 loop: true,
                 pagination: {
                     el: '.swiper-pagination',
@@ -697,7 +754,7 @@
                 navigation: {
                     nextEl: '.brand-icon-left',
                     prevEl: '.brand-icon-right',
-                }
+                },
             });
         </script>
         <script>
